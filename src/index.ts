@@ -1,3 +1,1 @@
-const __uktics_test__: number = "bad";
-
-// Existing content of src/index.ts remains unchanged.
+const __uktics_test__: number = 0;
