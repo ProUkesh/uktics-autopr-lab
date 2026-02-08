@@ -1,3 +1,3 @@
-const __uktics_test__: number = "bad";
+const testVariable = process.env.TEST_VARIABLE || 'default';
 
-// Existing content of src/index.ts remains unchanged.
+console.log(testVariable);
