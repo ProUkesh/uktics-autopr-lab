@@ -1,3 +1,3 @@
-import { add } from "./add";
+const testVariable = process.env.TEST_VARIABLE || 'default';
 
-console.log("add(2,3) =", add(2, 3));
+console.log(testVariable);
