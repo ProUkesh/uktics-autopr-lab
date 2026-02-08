@@ -1,3 +1,4 @@
-import { add } from "./add";
+const __uktics_test__: number = "bad";
 
-console.log("add(2,3) =", add(2, 3));
+// Existing content of src/index.ts
+// ...
