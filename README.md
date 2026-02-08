@@ -1,2 +1,2 @@
-# uktics-autopr-lab
-Lets check Uktics
+# Test
+This is a test heading added to the README.
