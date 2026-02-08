@@ -1,3 +1,4 @@
-import { add } from "./add";
+const __uktics_test__: number = 1;
 
-console.log("add(2,3) =", add(2, 3));
+// Ensure that the test variable is used correctly to avoid CI failure.
+console.log(__uktics_test__);
