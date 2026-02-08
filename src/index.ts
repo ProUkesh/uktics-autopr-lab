@@ -1,1 +1,1 @@
-const __uktics_test__: number = 0;
+const __uktics_test__: number = 1;
