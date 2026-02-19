@@ -3,64 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uktics AutoFix Demo</title>
+    <title>Uktics AutoFix</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; margin: 0; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: rgba(255, 255, 255, 0.1); }
-        nav a { color: #ffffff; text-decoration: none; margin: 0 15px; }
-        .hero { text-align: center; padding: 50px 20px; }
-        .hero h1 { font-size: 2.5em; }
-        .hero p { margin: 10px 0; }
-        .button { background-color: #6200ea; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
-        .features { display: flex; justify-content: space-around; padding: 20px; }
-        .feature-card { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 30%; }
-        .steps { padding: 20px; }
-        footer { text-align: center; padding: 20px; }
-        @media (max-width: 768px) { .features { flex-direction: column; align-items: center; } .feature-card { width: 80%; margin-bottom: 20px; } }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #121212; color: #ffffff; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        .logo { font-size: 24px; font-weight: bold; }
+        .nav-links { display: flex; gap: 15px; }
+        .button { background-color: #6200ea; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        .hero { text-align: center; margin: 50px 0; }
+        .features { display: flex; justify-content: space-around; margin: 20px 0; }
+        .feature-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 20px; width: 30%; }
+        .steps { display: flex; justify-content: space-around; margin: 20px 0; }
+        .footer { text-align: center; margin-top: 50px; font-size: 12px; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Uktics</div>
+    <div class="container">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">AutoFix</a>
-            <a href="#">Runs</a>
-            <button class="button" onclick="openModal()">Connect GitHub</button>
+            <div class="logo">Uktics</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">AutoFix</a>
+                <a href="#">Runs</a>
+                <button class="button" onclick="openModal()">Connect GitHub</button>
+            </div>
         </nav>
-    </header>
-    <div class="hero">
-        <h1>AI Dev Agent for AutoFix PRs</h1>
-        <p>Automate your pull requests with ease.</p>
-        <button class="button">Start AutoFix</button>
-        <button class="button">View Runs</button>
-    </div>
-    <div class="features">
-        <div class="feature-card">
-            <h2>Plan → Code → Review</h2>
-            <p>Streamline your development process.</p>
+        <div class="hero">
+            <h1>AI Dev Agent for AutoFix PRs</h1>
+            <p>Your intelligent assistant for managing pull requests.</p>
+            <button class="button">Start AutoFix</button>
+            <button class="button">View Runs</button>
         </div>
-        <div class="feature-card">
-            <h2>CI Watch + Auto-merge</h2>
-            <p>Keep your codebase clean and up-to-date.</p>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Plan → Code → Review</h3>
+                <p>Streamline your development process.</p>
+            </div>
+            <div class="feature-card">
+                <h3>CI Watch + Auto-merge</h3>
+                <p>Automate your CI/CD pipeline.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Run History + Patches</h3>
+                <p>Keep track of your changes.</p>
+            </div>
         </div>
-        <div class="feature-card">
-            <h2>Run History + Patches</h2>
-            <p>Track changes and manage patches effectively.</p>
+        <div class="steps">
+            <div><span>1️⃣</span> Step One</div>
+            <div><span>2️⃣</span> Step Two</div>
+            <div><span>3️⃣</span> Step Three</div>
+            <div><span>4️⃣</span> Step Four</div>
+        </div>
+        <div class="footer">
+            <p>Demo UI for uktics-autopr-lab</p>
         </div>
     </div>
-    <div class="steps">
-        <h2>How it works</h2>
-        <ol>
-            <li>🔍 Analyze your code.</li>
-            <li>🛠️ Apply fixes automatically.</li>
-            <li>✅ Review changes.</li>
-            <li>🚀 Merge with confidence.</li>
-        </ol>
-    </div>
-    <footer>
-        <p>Demo UI for uktics-autopr-lab</p>
-    </footer>
     <script>
         function openModal() {
             alert('This is a UI-only demo.');
