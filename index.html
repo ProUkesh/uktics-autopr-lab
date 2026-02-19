@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uktics AutoFix Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #121212; color: #ffffff; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: rgba(255, 255, 255, 0.1); }
+        nav a { color: #ffffff; margin: 0 15px; text-decoration: none; }
+        .button { background: #6200ea; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .hero { text-align: center; padding: 50px 20px; }
+        .features { display: flex; justify-content: space-around; padding: 20px; }
+        .feature-card { background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 30%; }
+        .steps { padding: 20px; }
+        footer { text-align: center; padding: 20px; }
+        @media (max-width: 768px) { .features { flex-direction: column; align-items: center; } .feature-card { width: 80%; margin: 10px 0; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Uktics</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#autofix">AutoFix</a>
+            <a href="#runs">Runs</a>
+            <button class="button" onclick="openModal()">Connect GitHub</button>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <h1>AI Dev Agent for AutoFix PRs</h1>
+        <p>Your intelligent assistant for managing pull requests.</p>
+        <button class="button" onclick="scrollToSection('autofix')">Start AutoFix</button>
+        <button class="button" onclick="scrollToSection('runs')">View Runs</button>
+    </section>
+    <section class="features">
+        <div class="feature-card">
+            <h2>Plan → Code → Review</h2>
+            <p>Streamline your development process.</p>
+        </div>
+        <div class="feature-card">
+            <h2>CI Watch + Auto-merge</h2>
+            <p>Automate your continuous integration.</p>
+        </div>
+        <div class="feature-card">
+            <h2>Run History + Patches</h2>
+            <p>Keep track of your changes and history.</p>
+        </div>
+    </section>
+    <section class="steps">
+        <h2>How it works</h2>
+        <ol>
+            <li>🔍 Analyze your code.</li>
+            <li>🛠️ Apply fixes automatically.</li>
+            <li>📦 Create pull requests.</li>
+            <li>✅ Review and merge.</li>
+        </ol>
+    </section>
+    <footer>
+        <p>Demo UI for uktics-autopr-lab</p>
+    </footer>
+    <script>
+        function openModal() {
+            alert('This is a UI-only demo.');
+        }
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
