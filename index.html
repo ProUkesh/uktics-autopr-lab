@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uktics AutoFix</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #121212; color: #ffffff; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+        .logo { font-size: 24px; font-weight: bold; }
+        .nav-links { display: flex; gap: 15px; }
+        .button { background-color: #6200ea; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        .hero { text-align: center; margin: 50px 0; }
+        .features { display: flex; justify-content: space-around; margin: 20px 0; }
+        .feature-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 20px; width: 30%; }
+        .steps { display: flex; justify-content: space-around; margin: 20px 0; }
+        .footer { text-align: center; margin-top: 50px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Uktics</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">AutoFix</a>
+                <a href="#">Runs</a>
+                <button class="button" onclick="openModal()">Connect GitHub</button>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>AI Dev Agent for AutoFix PRs</h1>
+            <p>Your intelligent assistant for managing pull requests.</p>
+            <button class="button">Start AutoFix</button>
+            <button class="button">View Runs</button>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Plan → Code → Review</h3>
+                <p>Streamline your development process.</p>
+            </div>
+            <div class="feature-card">
+                <h3>CI Watch + Auto-merge</h3>
+                <p>Automate your CI/CD pipeline.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Run History + Patches</h3>
+                <p>Keep track of your changes.</p>
+            </div>
+        </div>
+        <div class="steps">
+            <div><span>1️⃣</span> Step One</div>
+            <div><span>2️⃣</span> Step Two</div>
+            <div><span>3️⃣</span> Step Three</div>
+            <div><span>4️⃣</span> Step Four</div>
+        </div>
+        <div class="footer">
+            <p>Demo UI for uktics-autopr-lab</p>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            alert('This is a UI-only demo.');
+        }
+    </script>
+</body>
+</html>
