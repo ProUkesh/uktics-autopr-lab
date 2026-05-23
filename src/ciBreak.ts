@@ -1,1 +1,1 @@
-export const _CI_BREAK = DOES_NOT_EXIST;
+export const _CI_BREAK = undefined;
