@@ -1,3 +1,3 @@
-const ukticsProdAutoHealSmoke: string = 123;
+const ukticsProdAutoHealSmoke: string = '123';
 
 export default ukticsProdAutoHealSmoke;
