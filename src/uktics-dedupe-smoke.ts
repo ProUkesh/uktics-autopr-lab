@@ -1,3 +1,3 @@
-const ukticsDedupeSmoke: string = 123;
+const ukticsDedupeSmoke: string = "123";
 
 export default ukticsDedupeSmoke;
