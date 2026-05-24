@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing</title>
+  <meta name="description" content="Pricing page." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #020617;
+      --panel: rgba(15, 23, 42, 0.76);
+      --panel-border: rgba(148, 163, 184, 0.22);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #93c5fd;
+      --button: #f8fafc;
+      --button-text: #020617;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.16), transparent 34rem),
+        linear-gradient(135deg, #020617, #0f172a 52%, #111827);
+      color: var(--text);
+    }
+
+    .shell {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 42px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      border-radius: 999px;
+      padding: 0 14px;
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(15, 23, 42, 0.44);
+    }
+
+    .nav a:hover {
+      color: var(--text);
+      border-color: rgba(248, 250, 252, 0.36);
+    }
+
+    main {
+      display: grid;
+      min-height: calc(100vh - 160px);
+      place-items: center;
+    }
+
+    .card {
+      width: 100%;
+      border: 1px solid var(--panel-border);
+      border-radius: 30px;
+      padding: clamp(28px, 7vw, 64px);
+      background: var(--panel);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+      backdrop-filter: blur(18px);
+    }
+
+    .eyebrow,
+    .plan-label {
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    h1 {
+      max-width: 840px;
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -0.05em;
+    }
+
+    h2 span {
+      color: var(--muted);
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 1.75;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .price-card,
+    .contact-panel {
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 24px;
+      padding: 22px;
+      background: rgba(15, 23, 42, 0.54);
+    }
+
+    .price-card.featured {
+      border-color: rgba(147, 197, 253, 0.7);
+      background: rgba(30, 64, 175, 0.22);
+    }
+
+    .price-card ul {
+      margin: 18px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0 18px;
+      background: var(--button);
+      color: var(--button-text);
+      text-decoration: none;
+      font-weight: 850;
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: rgba(148, 163, 184, 0.12);
+      color: var(--text);
+    }
+
+    @media (max-width: 760px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100% - 24px, 1040px);
+        padding-top: 18px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+        margin-bottom: 24px;
+      }
+
+      .card {
+        border-radius: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Index</a>
+    </nav>
+    <main>
+
+      <section class="card" aria-labelledby="page-title">
+        <p class="eyebrow">Pricing</p>
+        <h1 id="page-title">Pricing</h1>
+        <p>Compare transparent Uktics plans for safe automated pull requests, review workflows, and production-ready code changes.</p>
+        
+        <div class="pricing-grid" aria-label="Pricing plans">
+          <article class="price-card">
+            <p class="plan-label">Starter</p>
+            <h2>Free</h2>
+            <p>Best for testing Uktics on small demo repositories.</p>
+            <ul>
+              <li>Dry-run patch previews</li>
+              <li>Risk and diff safety checks</li>
+              <li>Single-repo experiments</li>
+            </ul>
+          </article>
+          <article class="price-card featured">
+            <p class="plan-label">Builder</p>
+            <h2>$19<span>/mo</span></h2>
+            <p>For indie builders who want reviewable PR automation.</p>
+            <ul>
+              <li>Multi-repo pull requests</li>
+              <li>Grouped run details</li>
+              <li>Verification warnings</li>
+            </ul>
+          </article>
+          <article class="price-card">
+            <p class="plan-label">Team</p>
+            <h2>Custom</h2>
+            <p>For production teams that need guarded AI engineering workflows.</p>
+            <ul>
+              <li>CI healing loop</li>
+              <li>GitHub App permissions</li>
+              <li>Advanced approval controls</li>
+            </ul>
+          </article>
+        </div>
+        <div class="actions">
+          <a class="button" href="index.html">Back Home</a>
+          <a class="button secondary" href="contact.html">Talk to us</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
