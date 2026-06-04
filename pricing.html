@@ -198,6 +198,27 @@
         border-radius: 24px;
       }
     }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .trust-badges span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.07);
+      color: #d8e5ff;
+      padding: 0 13px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
   </style>
 </head>
 <body>
@@ -209,7 +230,16 @@
 
       <section class="card" aria-labelledby="page-title">
         <p class="eyebrow">Pricing</p>
-        <h1 id="page-title">Pricing</h1>
+        <h1 id="page-title">AI Dev Agent for AutoFix, PRs, and CI Healing</h1>
+
+        <div class="trust-badges" aria-label="Trust highlights">
+          <span>Clean dark SaaS navbar with: - Uktics logo text - Home - Docs</span>
+          <span>GitHub - Pricing - Login</span>
+          <span>Hero section:</span>
+          <span>Product preview mockup: Show a dashboard-style card with:</span>
+          <span>Repo connected - CI failed - Patch generated - Risk score LOW</span>
+          <span>PR ready to merge</span>
+        </div>
         <p>Compare transparent Uktics plans for safe automated pull requests, review workflows, and production-ready code changes.</p>
         
         <div class="pricing-grid" aria-label="Pricing plans">
