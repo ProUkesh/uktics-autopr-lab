@@ -1,6 +1,15 @@
-const __uktics_test__: number = 0;
+import express from 'express';
+import healthzRouter from './routes/healthz';
 
-// Existing content of src/index.ts
-// ...
+const app = express();
 
-void __uktics_test__;
+app.use('/api/healthz', healthzRouter);
+
+app.get('/', (req, res) => {
+  res.send('<footer>Health Check: <a href="/api/healthz">Check Status</a></footer>');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
