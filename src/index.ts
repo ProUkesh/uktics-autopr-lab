@@ -1,4 +1,4 @@
-const __uktics_test__: number = 0;
+const __uktics_test__: number = "bad";
 
 // Existing content of src/index.ts
 // ...
